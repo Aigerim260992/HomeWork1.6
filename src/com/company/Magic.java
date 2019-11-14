@@ -1,6 +1,6 @@
 package com.company;
 
-public class Magic extends Player{
+public class Magic extends Player implements SuperAbilityble{
      private String attackType;
 
     public Magic(int health, String damage, String attackType) {
@@ -14,5 +14,11 @@ public class Magic extends Player{
 
     public void setAttackType(String attackType) {
         this.attackType = attackType;
+    }
+
+    @Override
+    public void drow() {
+        System.out.println("✨");
+
     }
 }

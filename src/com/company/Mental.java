@@ -1,18 +1,24 @@
 package com.company;
 
-public class Mental extends Player{
-     private int sos;
+public class Mental extends Player implements SuperAbilityble{
+     private String AttackType;
 
-    public Mental(int health, String damage, int sos) {
+    public Mental(int health, String damage, String attackType) {
         super(health, damage);
-        this.sos = sos;
+        this.AttackType = attackType;
     }
 
-    public int getSos() {
-        return sos;
+    public String getSos() {
+        return AttackType;
     }
 
-    public void setSos(int sos) {
-        this.sos = sos;
+    public void setSos(String AttackType) {
+        this.AttackType = AttackType;
+    }
+
+    @Override
+    public void drow() {
+        System.out.println("\uD83D\uDCA1");
+
     }
 }
